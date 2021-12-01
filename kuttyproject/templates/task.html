@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>kutty post </h1>
+                </div>
+            </div>
+          <form method="post" class="p-3 shadow">
+  {% csrf_token %}
+  <div class="form-group">
+    <li class="active"><a href="accounts/register">register</a></li><br>
+
+  </div>
+  <div class="form-group">
+    <input type="text" name="name" class="form-control" placeholder="caption of the post">
+
+  </div>
+  <div class="form-group">
+    <input type="text" name="desc" class="form-control" placeholder="story">
+
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-success">
+  </div>
+</form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
